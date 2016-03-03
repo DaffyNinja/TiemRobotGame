@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour {
     float startSpeed;
 
 
-    float flipMove;
+    public float flipMove;
     public bool isFacingRight;
     [Space(5)]
     public float jumpRayLength;
@@ -120,7 +120,7 @@ public class PlayerMove : MonoBehaviour {
 
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, jumpRayLength, groundLayer);  //PlayerMask and rayLength are public variables that need to be set 
-        Debug.DrawRay(transform.position, Vector2.left, Color.red, jumpRayLength);
+       // Debug.DrawRay(transform.position, Vector2.left, Color.red, jumpRayLength);
 
         if (hit)
         {
